@@ -1,7 +1,37 @@
 Getting Started:
-1) Make sure you have Git installed.
+
+1) 
+Make sure you have Git installed.
 >git --version
 If you it prints your version, it means you have it properly installed. 
 
-1a) If you don't have git, download here
+1a) 
+If you don't have git, download here: https://git-scm.com/downloads
+
+
+/*
+ Git is a Version Control System (VCS). It helps many people work together on the same codebase.
+ It is fairly simple to start but can get very complex. You will want to learn more bout Git.
+ Some various capabilities are: cloning peoples code (we will do this on the repo I have created),
+ branching code, merging changes with other peoples changes, keeping track of the whole history 
+ and letting you go back to any previous version. There is a .gitignore file that is very important when using git. 
+*/
+
+
+
 2)
+First go to the directory you want to hold the repo. 
+>cd /webdevFolder
+
+
+
+3)
+Then clone the repo into that folder.
+>git clone https://github.com/BigMckissack/learnJS.git
+
+3a)
+If you cannot install git, download the zip file here: https://github.com/BigMckissack/learnJS/archive/master.zip
+
+
+
+4)
