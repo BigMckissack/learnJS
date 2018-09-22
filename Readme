@@ -1,5 +1,20 @@
 Getting Started:
 
+Helpful commands in terminal
+Windows:
+>dir filepath 	//changes your current working directory to the file path
+>dir ..			//sets your current working directory the parent of thee folder you were in
+>ls 			//lists the contents of the directory you are in
+>pwd 			//prints the current working directory
+>printenv		//prints your environment variables
+/*
+	Your environment variables are important to understand. They are basically keywords that you define for your computer to do certain things.
+	One example and very important environment variable is the PATH variable. You define the PATH as a list of directories (typically /bin directories because this is where executable files normally exist). When you run commands in terminal, your computer will look in your current working directory and in all directories defined in the PATH. First place to troubleshoot if commands aren't working in the command line.
+/*
+
+
+
+
 1) 
 Make sure you have Git installed.
 >git --version
@@ -20,7 +35,8 @@ If you don't have git, download here: https://git-scm.com/downloads
 
 
 2)
-First go to the directory you want to hold the repo. 
+First create and navigate to the directory where you want the repo to exist. 
+>mkdir webdevFolder
 >cd /webdevFolder
 
 
@@ -31,7 +47,14 @@ Then clone the repo into that folder.
 
 3a)
 If you cannot install git, download the zip file here: https://github.com/BigMckissack/learnJS/archive/master.zip
+Then unzip the .zip file.
 
 
+Groups:
+Create a git repo
+Initialize the repo and groups will create basic web app. Then all members pull master branch, create their own feature branch with a route and merge it back.
 
-4)
+
+What is Javascript?
+Single-threaded: Uses only one CPU at a time and does one one thing at a time.
+Asynchronous 
