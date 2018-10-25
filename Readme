@@ -2,9 +2,9 @@ Getting Started:
 
 Helpful commands in terminal
 Windows:
->dir filepath 	//changes your current working directory to the file path
->dir ..			//sets your current working directory the parent of thee folder you were in
->ls 			//lists the contents of the directory you are in
+>cd filepath 	//changes your current working directory to the file path
+>cd ..			//sets your current working directory the parent of thee folder you were in
+>dir 			//lists the contents of the directory you are in
 >pwd 			//prints the current working directory
 >printenv		//prints your environment variables
 /*
@@ -12,6 +12,9 @@ Windows:
 	One example and very important environment variable is the PATH variable. You define the PATH as a list of directories (typically /bin directories because this is where executable files normally exist). When you run commands in terminal, your computer will look in your current working directory and in all directories defined in the PATH. First place to troubleshoot if commands aren't working in the command line.
 /*
 
+
+
+***************************
 
 
 
@@ -37,7 +40,7 @@ If you don't have git, download here: https://git-scm.com/downloads
 2)
 First create and navigate to the directory where you want the repo to exist. 
 >mkdir webdevFolder
->cd /webdevFolder
+>cd webdevFolder
 
 
 
@@ -50,11 +53,87 @@ If you cannot install git, download the zip file here: https://github.com/BigMck
 Then unzip the .zip file.
 
 
+
+****************
+
+
+
+More on Git:
+
+
+>git status
+Really helpful "non-dangerous" command to help you understand your status
+
+>git clone URLtoCLONE
+First command to copy an existing project. You can clone any publicly accessible git project with this command.
+
+>git pull
+Bring latest code from remote and merge it into your local working copy
+Replaces "git fetch" + "git merge" and combines them into a single function.
+Best practice to only "git pull" if you have committed all changes and have a clean current working copy. 
+"git status" will show you if you have committed all changes. "git stash" can help also, see more later.
+
+
+Good Workflow:
+Commit often and provide meaningful commit messages. This will help if you ever need to revert your code. Commits are basically just checkpoints that you can go back to if ever needed.
+
+Logon first time for the day:
+1) finish commiting any loose ends from previous day. Ensure you have a clean working copy. (There are some cases you will be working on a complex feature that takes more than a day. It is ok to finish those types of changes without following this exact flow. Having a seperate branch may be useful)
+
+2) git pull
+If you are working on a project with others, this will get all the new changes your teammates have submitted. It is important to keep your local copy relevant with the remote. If you work too much without pulling, you may run into bigger conflicts when you do pull. Therefore pulling often can help keep conflicts from being sever.
+2a) fix  any potential conflicts
+If there are any merge conflicts you need to resolve them carefully. Be sure to run and test your code to ensure the merges are good.
+2c) push fixed conflicts
+After editing the conflicted files, "git add --all", "git commit -m "message for commit", git push
+
+3) Make your new changes to the code
+This is where you are actually doing your new work and implementing functionality. Once you are satisfied with the current changes (ie: a feature is implemented) then move on
+
+4) git add --all    OR    git add fileName
+"git add --all" will add all the changes of all files to your staging area. "git add fileName" just adds specific files one at a time to the staging area.
+
+5) git commit -m "message"
+make sure you write a meaningful message to help your teammates understand what is in the commit.
+
+6) git pull
+depending on how long it has been since your last pull, another teammate could have added more changes.  You need to be up-to-date with the remote before your push your changes on top. Therefore, a pull here ensures you have the latest code when you move on to push your changes.
+
+7) git push
+This publishes your changes to the remove and allows your team to view and use the new code. 
+
+
+
 Groups:
 Create a git repo
 Initialize the repo and groups will create basic web app. Then all members pull master branch, create their own feature branch with a route and merge it back.
 
 
+Write file
+git add --all
+git commit -m "new file"
+git push
+git checkout -b feature
+change file
+git add --all
+git commit -m "change file on feature"
+git push
+git checkout master
+change file differently
+git add --all
+git commit -m "change file on master"
+git push
+git checkout feature
+git merge master
+fix conflict
+git checkout master
+git merge --no-ff feature
+
+******************
+
+
 What is Javascript?
-Single-threaded: Uses only one CPU at a time and does one one thing at a time.
-Asynchronous 
+Single-threaded Event Loop: Uses only one CPU at a time and does only one thing at a time(the next thing in the Event Queue).
+Asynchronous: processes can happen "out of order" of how its written in the code. A process can be started and not finish before the next process is started.
+
+
