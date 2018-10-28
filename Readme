@@ -131,9 +131,47 @@ git merge --no-ff feature
 
 ******************
 
+What is a website?
+
+There are 3 core components that make up the majority of websites.
+1) HTML
+2) CSS
+3) Javascript
+
+HTML: The structure of your website. Foundation for all content to be displayed through. It is also big factor for user accessibilty (ie blind or impaired user ease of use)
+CSS: This defines all the styles to be used in your html. You dont define the text but how the text is displayed and visible aspects.
+Javascript: This is the glue that puts the two together and then supercharges the website. Without it, your website would be a static entity that users could go look at but not interact with in a rich way. The Javascript is what allows dynamic things to happen on a site. It is what lets a site interact with a Database. It is the reason websites have the great functionality that they do.
+
+******************
+
+
+Project File Layout
+
+Folder structure is very important for a clean project that others can understand. Here is a bit of a breakdown into this project's.
+
+learnJS: Top level projcet folder. Name of our project
+	assets: This is sometimes named the "public" folder. It should contain all assets that the client (user of your webapp) will need. Used with "express.static"
+		js: Hold the javascript you write for your app. 
+			controllers: Angular entity needed
+				mainControl.js: main controller file for the app
+		views: Holds the html that you will send to client
+			contentToSend.html: example html file
+		index.html: main html file for your project. "Root" of the content you will display
+	server: This folder unlike assets will be for your webapp server. It will not get sent to client side.
+		serverAPI: This file is where you define the routes that your server will respond to from the client browser.
+	node_modules: This is a folder created by Node (the server we are using) to hold the dependencies we install for our webapp. (ie express)
+	app.js: This is the main bootstrap file that you will run to start your server.
+	package.json: This is a Node file that defines what dependencies your webapp uses. It defines what should be installed in the node_modules
+	package-lock.json: Node generated file, don't worry about it. If "npm" starts acting up, sometimes deleting it will help.
+	Readme: A file to explain your project and how to run it.
+
+
+
+******************
 
 What is Javascript?
 Single-threaded Event Loop: Uses only one CPU at a time and does only one thing at a time(the next thing in the Event Queue).
 Asynchronous: processes can happen "out of order" of how its written in the code. A process can be started and not finish before the next process is started.
+
 
 

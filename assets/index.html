@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<!-- import your css in the head -->
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	
+	<body ng-app="learnJS" ng-controller="mainController">
+		<h1>hi {{myName}}</h1>
+		<h2>Here are some of my hobbies:</h2>
+		<ul>
+			<li ng-repeat="hobby in myHobbies">
+				{{hobby}}
+			</li>
+		</ul>
+
+		<div ng-if="schoolPride" class="blue">
+			BLUEEE!
+		</div>
+		<div ng-if="!schoolPride" class="orange">
+			ORANGEEE!
+		</div>
+
+		<button ng-click="changeSchoolPride()">Go Gators!</button>
+
+		<!-- Javascript Dependecies needed in your project should go in your index.html-->
+		<!-- the first is Angular, the next is the file we create that will be the Angular controller -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+		<script type="text/javascript" src="js/controllers/mainControl.js"></script>
+	</body>
+</html>
