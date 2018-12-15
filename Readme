@@ -103,7 +103,7 @@ depending on how long it has been since your last pull, another teammate could h
 This publishes your changes to the remove and allows your team to view and use the new code. 
 
 
-
+::ACTIVITY::
 Groups:
 Create a git repo
 Initialize the repo and groups will create basic web app. Then all members pull master branch, create their own feature branch with a route and merge it back.
@@ -165,6 +165,17 @@ learnJS: Top level projcet folder. Name of our project
 	package-lock.json: Node generated file, don't worry about it. If "npm" starts acting up, sometimes deleting it will help.
 	Readme: A file to explain your project and how to run it.
 
+
+
+::ACTIVITY::
+Create 2 drop-down lists. Make the second drop-down choices correspond to the first drop-down selection. Do not display the second drop-down until the first is selected.
+IE: Select1: 
+		Male
+		Female
+	Select2_male:		Select2_female:
+		Bob				Sally
+		Jim				Denise
+		Kyle			Mary
 
 
 ******************
